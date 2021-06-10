@@ -1,0 +1,112 @@
+/*  The fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+
+body {
+  padding: 10% 5%;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+/* Fontstyling */
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 23px;
+}
+.twittername {
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+.twittertext {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 1%;
+}
+/* Headarea */
+
+header {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hanburger */
+
+label.hamburg {
+  display: block;
+
+  width: 70px;
+  height: 50px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+.line {
+  position: absolute;
+  left: 10px;
+  height: 2px;
+  width: 55px;
+  background: #000;
+  border-radius: 2px;
+  display: block;
+}
+
+.line:nth-child(1) {
+  top: 12px;
+}
+.line:nth-child(2) {
+  top: 24px;
+}
+.line:nth-child(3) {
+  top: 36px;
+}
+/* Twittercard */
+
+.twittercard {
+  display: flex;
+  margin: 10% 0;
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.tronald {
+  min-width: 1px;
+  min-height: 100%;
+  background-color: black;
+}
+.pic {
+  height: 100%;
+  padding: 2%;
+}
+
+.pic img {
+  min-width: 55px;
+  min-height: 55px;
+  background-color: aqua;
+  border-radius: 50%;
+}
+.textcontainer {
+  width: 80%;
+}
