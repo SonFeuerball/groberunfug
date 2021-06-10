@@ -56,8 +56,10 @@ function fetchAnswer(input) {
             console.log(text)
             answerName.innerHTML = input
             answerTwitterName.innerHTML = `@real${input}`.replace(" ", "")
-            twitterAnswer.innerHTML = text.message
-
+            twitterAnswer.innerHTML = "schreibt..."
+            setTimeout(() => {
+                twitterAnswer.innerHTML = text.message
+            }, 2000)
         })
 }
 
