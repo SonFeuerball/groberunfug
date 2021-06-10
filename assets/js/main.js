@@ -1,10 +1,3 @@
-const tronald = 'Donald'
-let input = 'test'
-
-const urlEnding = [
-    `back/`,
-    `blackadder/`
-]
 
 const container = document.getElementById('container')
 
@@ -36,10 +29,8 @@ function fetchDonaldNote(input) {
 }
 
 function fetchAnswer(input) {
-    let baseUrl = 'https://www.foaas.com/'
-    let endUrl = urlEnding[Math.floor(Math.random() * urlEnding.length)] + tronald + "/" + input
 
-    fetch(baseUrl + endUrl, {
+    fetch(giveAnswerUrl(input), {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -49,4 +40,52 @@ function fetchAnswer(input) {
             return response.json()
         })
         .then(text => console.log(text))
+}
+
+function giveAnswerUrl(input) {
+
+    const tronald = 'Donald'
+    // let input = input
+
+    const urlEnding = [
+        `asshole/${input}`,
+        `back/${tronald}/${input}`,
+        `bag/${input}`,
+        `bucket/${input}`,
+        `blackadder/${tronald}/${input}`,
+        `cocksplat/${tronald}/${input}`,
+        `cup/${input}`,
+        `dense/${input}`,
+        `deraadt/${tronald}/${input}`,
+        `family/${input}`,
+        `fascinating/${input}`,
+        `ftfy/${input}`,
+        `fyyff/${input}`,
+        `holygrail/${input}`,
+        `horse/${input}`,
+        `immensity/${input}`,
+        `ing/${tronald}/${input}`,
+        `keep/${tronald}/${input}`,
+        `look/${tronald}/${input}`,
+        `lowpoly/${input}`,
+        `madison/${tronald}/${input}`,
+        `maybe/${input}`,
+        `no/${input}`,
+        `nugget/${tronald}/${input}`,
+        `outside/${tronald}/${input}`,
+        `ratsarse/${input}`,
+        `retard/${input}`,
+        `shutup/${tronald}/${input}`,
+        `thanks/${input}`,
+        `think/${tronald}/${input}`,
+        `waste/${tronald}/${input}`,
+        `yoda/${tronald}/${input}`,
+        `zero/${input}`,
+        `ballmer/${tronald}/${tronald}/${input}`,
+        `caniuse/twitter/${input}`
+    ]
+
+    let baseUrl = 'https://www.foaas.com/'
+    let endUrl = urlEnding[Math.floor(Math.random() * urlEnding.length)]
+    return baseUrl + endUrl
 }
