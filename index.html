@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-    <title>Grober Unfug</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-  <body>
+  <title>Grober Unfug</title>
+</head>
+
+<body>
+  <div id="wrapumalles">
+
+
     <header>
-      <nav>
-        <div id="buttons">
-          <label for="hamburg" class="hamburg">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </label>
-        </div>
-      </nav>
+      <button id="navButton" class="openbtn">&#9776; Open Sidebar</button>
+      <!-- <nav>
+      <div id="buttons">
+        <label for="hamburg" class="hamburg">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </label>
+      </div>
+    </nav> -->
       <h1>Tronaldtweetor</h1>
     </header>
     <main id="container">
@@ -36,7 +41,7 @@
             <p class="twittername">@TrealTronaldDrump</p>
           </div>
           <div class="message">
-            <p class="twittertext">
+            <p id="twitterTronald" class="twittertext">
               Crooked Hillary Clinton got Brexit wrong. I said LEAVE will win.
               She has no sense of markets and such bad judgement. Only a
               question of time.
@@ -53,18 +58,29 @@
         </div>
         <div class="textcontainer">
           <div class="sender">
-            <h2>Hillary Clinton</h2>
-            <p class="twittername">@realHillaryClinton</p>
+            <h2 id="answerName">Hillary Clinton</h2>
+            <p id="answerTwitterName" class="twittername">@realHillaryClinton</p>
           </div>
           <div class="message">
-            <p class="twittertext">
+            <p id="twitterAnswer" class="twittertext">
               Well Donald, aren't you a shining example of a rancid fuck-nugget.
             </p>
           </div>
         </div>
       </section>
     </main>
+  </div>
 
-    <script src="assets/js/main.js" charset="UTF-8"></script>
-  </body>
+  <!-- sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a> -->
+  </div>
+
+  <script src="assets/js/main.js" charset="UTF-8"></script>
+</body>
+
 </html>

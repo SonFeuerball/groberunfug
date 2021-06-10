@@ -1,5 +1,15 @@
-
+//sidebar
+let sidebar = document.getElementById("mySidebar");
+let wrapumalles = document.getElementById("wrapumalles");
+let navButton = document.getElementById("navButton");
+let openToggle = false;
+//other stuff
 const container = document.getElementById('container')
+
+const twitterTronald = document.getElementById('twitterTronald')
+const answerName = document.getElementById('answerName')
+const answerTwitterName = document.getElementById('answerTwitterName')
+const twitterAnswer = document.getElementById('twitterAnswer')
 
 fetch('https://api.tronalddump.io/tag/')
     .then(response => response.json())
@@ -8,13 +18,13 @@ fetch('https://api.tronalddump.io/tag/')
         let tagArray = tags._embedded.tag
         console.log(tagArray)
         tagArray.forEach(element => {
-            let button = document.createElement('button')
-            button.innerHTML = element.value
-            container.appendChild(button)
+            let link = document.createElement('a')
+            link.innerHTML = element.value
+            sidebar.appendChild(link)
 
             //value from click?!
-            button.addEventListener('click', (event) => {
-                let input = button.innerHTML
+            link.addEventListener('click', (event) => {
+                let input = link.innerHTML
                 console.log(input)
                 fetchDonaldNote(input)
                 fetchAnswer(input)
@@ -25,11 +35,14 @@ fetch('https://api.tronalddump.io/tag/')
 function fetchDonaldNote(input) {
     fetch(`https://api.tronalddump.io/search/quote?tag=${input}`)
         .then(response => response.json())
-        .then(quotes => console.log(quotes._embedded.quotes[0].value))
+        .then(quotes => {
+            let twitterTronaldText = quotes._embedded.quotes[0].value
+            console.log(twitterTronaldText)
+            twitterTronald.innerHTML = twitterTronaldText
+        })
 }
 
 function fetchAnswer(input) {
-
     fetch(giveAnswerUrl(input), {
         headers: {
             'Content-Type': 'application/json',
@@ -39,13 +52,18 @@ function fetchAnswer(input) {
         .then(response => {
             return response.json()
         })
-        .then(text => console.log(text))
+        .then(text => {
+            console.log(text)
+            answerName.innerHTML = input
+            answerTwitterName.innerHTML = `@real${input}`.replace(" ", "")
+            twitterAnswer.innerHTML = text.message
+
+        })
 }
 
 function giveAnswerUrl(input) {
 
     const tronald = 'Donald'
-    // let input = input
 
     const urlEnding = [
         `asshole/${input}`,
@@ -89,3 +107,34 @@ function giveAnswerUrl(input) {
     let endUrl = urlEnding[Math.floor(Math.random() * urlEnding.length)]
     return baseUrl + endUrl
 }
+
+//sidebar
+navButton.addEventListener('click', function () {
+    if (openToggle) {
+        closeNav();
+    } else {
+        openNav();
+    }
+});
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+    sidebar.style.width = "100vw";
+    wrapumalles.style.marginLeft = "0vw";
+    openToggle = true;
+}
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    sidebar.style.width = "0";
+    wrapumalles.style.marginLeft = "0";
+    openToggle = false;
+}
+window.addEventListener('click', function (event) {
+    console.log("window clicked");
+    if (openToggle) {
+        console.log("open sidebar");
+        if (event.target != sidebar && event.target != navButton) {
+            console.log("outside sidebar");
+            closeNav();
+        }
+    }
+});
