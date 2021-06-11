@@ -41,7 +41,10 @@ function fetchDonaldNote(input) {
     fetch(`https://api.tronalddump.io/search/quote?tag=${input}`)
         .then(response => response.json())
         .then(quotes => {
-            let twitterTronaldText = quotes._embedded.quotes[0].value
+            console.log(quotes)
+            let arrayLength = quotes.count
+            console.log(arrayLength)
+            let twitterTronaldText = quotes._embedded.quotes[Math.floor(Math.random() * arrayLength)].value
 
             twitterTronald.innerHTML = ''
 
