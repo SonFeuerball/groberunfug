@@ -223,7 +223,7 @@ function setAnswerProfilePic(input) {
             answerProfilePic.src = 'assets/img/tedcruz.jpg'
             break;
         case "Donald Trump":
-            answerProfilePic.src = 'assets/img/dumpy.png'
+            answerProfilePic.src = 'assets/img/donaldo.jpg'
             break;
         case "Girlfriends":
             answerProfilePic.src = 'assets/img/girlfriends.jpg'

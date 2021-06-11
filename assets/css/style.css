@@ -22,23 +22,23 @@ body {
 /* Fontstyling */
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 200;
   text-transform: uppercase;
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
   font-weight: 300;
   margin-top: 23px;
   color: #fff;
 }
 .twittername {
   font-weight: 200;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 .twittertext {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1em;
   margin-top: 1%;
 }
 
@@ -186,19 +186,19 @@ header {
   /* Fontstyling */
 
   h1 {
-    font-size: 1rem;
+    font-size: 1em;
   }
   h2 {
-    font-size: 0.75rem;
+    font-size: 0.75em;
   }
   .twittername {
-    font-size: 0.5rem;
+    font-size: 0.5em;
   }
   .twittertext {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
   .openbtn {
-    font-size: 0.75rem;
+    font-size: 0.75em;
   }
   .textcontainer {
     padding: 2%;
