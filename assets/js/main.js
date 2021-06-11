@@ -85,7 +85,7 @@ function fetchAnswer(input) {
 
             answerName.innerHTML = input
             answerTwitterName.innerHTML = `@real${input}`.replace(" ", "")
-            twitterAnswer.innerHTML = "schreibt..."
+            twitterAnswer.innerHTML = "is writing..."
             setTimeout(() => {
                 twitterAnswer.innerHTML = text.message
             }, 3000)
