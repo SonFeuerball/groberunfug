@@ -108,9 +108,24 @@ function giveAnswerUrl(input) {
         `ballmer/${tronald}/${tronald}/${input}`,
         `caniuse/twitter/${input}`
     ]
+    const tronaldEnding = [
+        `awesome/${input}`,
+        `cool/${input}`,
+        `idea/${input}`,
+        `legend/${tronald}/${input}`,
+        `rockstar/${tronald}/${input}`,
+        `dalton/${tronald}/${input}`,
+        `yeah/${input}`
+    ]
 
     let baseUrl = 'https://www.foaas.com/'
-    let endUrl = urlEnding[Math.floor(Math.random() * urlEnding.length)]
+    let endUrl
+
+    if (input == "Donald Trump") {
+        endUrl = tronaldEnding[Math.floor(Math.random() * tronaldEnding.length)]
+    } else {
+        endUrl = urlEnding[Math.floor(Math.random() * urlEnding.length)]
+    }
     return baseUrl + endUrl
 }
 
