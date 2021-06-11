@@ -208,7 +208,7 @@ function setAnswerProfilePic(input) {
             answerProfilePic.src = 'assets/img/muslims.png'
             break;
         case "Apologies":
-            answerProfilePic.src = 'assets/img/apologies.png'
+            answerProfilePic.src = 'assets/img/apology.png'
             break;
         case "Ben Carson":
             answerProfilePic.src = 'assets/img/bencarson.jpg'
