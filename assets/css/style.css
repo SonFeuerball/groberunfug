@@ -41,6 +41,7 @@ h2 {
   font-size: 1rem;
   margin-top: 1%;
 }
+
 /* Headarea */
 
 header {
@@ -79,8 +80,10 @@ header {
 }
 .tronald {
   min-width: 1px;
-  min-height: 100%;
+  height: 100%;
+  display: none;
   background-color: #fff;
+  transition-duration: 10s;
 }
 .pic {
   height: 100%;
@@ -100,6 +103,10 @@ header {
 }
 .textcontainer {
   width: 80%;
+}
+
+#answerSection {
+  display: none;
 }
 
 /* sidebar */

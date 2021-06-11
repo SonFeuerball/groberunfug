@@ -11,6 +11,8 @@ const answerName = document.getElementById('answerName')
 const answerTwitterName = document.getElementById('answerTwitterName')
 const twitterAnswer = document.getElementById('twitterAnswer')
 const answerProfilePic = document.getElementById('answerProfilePic')
+const answerSection = document.getElementById('answerSection')
+const verticalLine = document.getElementById('verticalLine')
 
 fetch('https://api.tronalddump.io/tag/')
     .then(response => response.json())
@@ -25,10 +27,12 @@ fetch('https://api.tronalddump.io/tag/')
 
             //value from click?!
             link.addEventListener('click', (event) => {
+                answerSection.style.display = 'none'
+                verticalLine.style.display = 'none'
+
                 let input = link.innerHTML
                 console.log(input)
                 fetchDonaldNote(input)
-                fetchAnswer(input)
             })
         });
     })
@@ -38,9 +42,27 @@ function fetchDonaldNote(input) {
         .then(response => response.json())
         .then(quotes => {
             let twitterTronaldText = quotes._embedded.quotes[0].value
-            console.log(twitterTronaldText)
-            twitterTronald.innerHTML = twitterTronaldText
+
+            twitterTronald.innerHTML = ''
+
+            let array = twitterTronaldText.split('')
+            array.forEach((buchstaben, index) => {
+                let timeout = setTimeout(() => {
+                    twitterTronald.innerHTML += buchstaben
+                }, index * 20)
+            })
+
+            let timer = array.length * 20
+            setTimeout(() => {
+                fetchAnswer(input)
+            }, timer)
         })
+}
+
+function testDelay(i) {
+    setInterval(() => {
+        console.log(i)
+    }, 10000)
 }
 
 function fetchAnswer(input) {
@@ -56,6 +78,9 @@ function fetchAnswer(input) {
         .then(text => {
             console.log(text)
 
+            answerSection.style.display = 'flex'
+            verticalLine.style.display = 'block'
+
             setAnswerProfilePic(input)
 
             answerName.innerHTML = input
@@ -63,7 +88,7 @@ function fetchAnswer(input) {
             twitterAnswer.innerHTML = "schreibt..."
             setTimeout(() => {
                 twitterAnswer.innerHTML = text.message
-            }, 2000)
+            }, 3000)
         })
 }
 
