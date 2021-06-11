@@ -102,10 +102,15 @@ label.hamburg {
 }
 
 .pic img {
-  min-width: 55px;
-  min-height: 55px;
+  /* min-width: 55px;
+  min-height: 55px; */
+  width: 55px;
+  height: 55px;
   background-color: aqua;
   border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center;
 }
 .textcontainer {
   width: 80%;
