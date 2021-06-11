@@ -161,11 +161,34 @@ header {
 }
 
 @media only screen and (min-device-width: 40em) {
+  body {
+    padding: 1%;
+  }
   #container {
     width: 40%;
     margin: 0 auto;
   }
   header {
     justify-content: space-around;
+  }
+  /* Fontstyling */
+
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 0.75rem;
+  }
+  .twittername {
+    font-size: 0.5rem;
+  }
+  .twittertext {
+    font-size: 0.8rem;
+  }
+  .openbtn {
+    font-size: 0.75rem;
+  }
+  .textcontainer {
+    padding: 2%;
   }
 }
