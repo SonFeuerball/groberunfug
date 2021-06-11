@@ -22,7 +22,7 @@ body {
 /* Fontstyling */
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 200;
   text-transform: uppercase;
 }
@@ -30,6 +30,7 @@ h2 {
   font-size: 1.25rem;
   font-weight: 300;
   margin-top: 23px;
+  color: #fff;
 }
 .twittername {
   font-weight: 200;
@@ -49,7 +50,15 @@ header {
   align-items: center;
   background-color: white;
 }
-
+#logoarea {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#logoarea img {
+  max-height: 5vh;
+}
 /* Twittercard */
 #container {
   display: flex;
@@ -71,7 +80,7 @@ header {
 .tronald {
   min-width: 1px;
   min-height: 100%;
-  background-color: black;
+  background-color: #fff;
 }
 .pic {
   height: 100%;
