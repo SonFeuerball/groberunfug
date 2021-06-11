@@ -13,15 +13,16 @@
 /* General */
 
 body {
-  padding: 10% 5%;
+  padding: 10% 0;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+  background-color: #00acee;
 }
 
 /* Fontstyling */
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 200;
   text-transform: uppercase;
 }
@@ -29,6 +30,7 @@ h2 {
   font-size: 1.25rem;
   font-weight: 300;
   margin-top: 23px;
+  color: #fff;
 }
 .twittername {
   font-weight: 200;
@@ -46,41 +48,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
-
-/* Hanburger */
-
-label.hamburg {
-  display: block;
-
-  width: 70px;
-  height: 50px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
+#logoarea {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.line {
-  position: absolute;
-  left: 10px;
-  height: 2px;
-  width: 55px;
-  background: #000;
-  border-radius: 2px;
-  display: block;
-}
-
-.line:nth-child(1) {
-  top: 12px;
-}
-.line:nth-child(2) {
-  top: 24px;
-}
-.line:nth-child(3) {
-  top: 36px;
+#logoarea img {
+  max-height: 5vh;
 }
 /* Twittercard */
-
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 2%;
+}
 .twittercard {
   display: flex;
   margin: 10% 0;
@@ -94,7 +80,7 @@ label.hamburg {
 .tronald {
   min-width: 1px;
   min-height: 100%;
-  background-color: black;
+  background-color: #fff;
 }
 .pic {
   height: 100%;
@@ -125,7 +111,7 @@ label.hamburg {
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #111; /* Black*/
+  background-color: #004f6e; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -136,7 +122,7 @@ label.hamburg {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #fff;
   display: block;
   transition: 0.3s;
 }
@@ -160,14 +146,14 @@ label.hamburg {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #21586e;
   color: white;
   padding: 10px 15px;
   border: none;
 }
 
 .openbtn:hover {
-  background-color: #444;
+  background-color: #004f6e;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -175,6 +161,39 @@ label.hamburg {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  transition: margin-left .5s; /* If you want a transition effect */
+  transition: margin-left 0.5s; /* If you want a transition effect */
   /* padding: 20px; */
+}
+
+@media only screen and (min-device-width: 40em) {
+  body {
+    padding: 1%;
+  }
+  #container {
+    width: 40%;
+    margin: 0 auto;
+  }
+  header {
+    justify-content: space-around;
+  }
+  /* Fontstyling */
+
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 0.75rem;
+  }
+  .twittername {
+    font-size: 0.5rem;
+  }
+  .twittertext {
+    font-size: 0.8rem;
+  }
+  .openbtn {
+    font-size: 0.75rem;
+  }
+  .textcontainer {
+    padding: 2%;
+  }
 }
